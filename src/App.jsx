@@ -257,7 +257,9 @@ function App() {
                 />
 
                 {devnameError && (
-                  <p className={errorClass}>{devnameError}</p>
+                  <p className={errorClass}>
+                    {devnameError}
+                  </p>
                 )}
               </div>
 
@@ -288,7 +290,9 @@ function App() {
                 </select>
 
                 {categError && (
-                  <p className={errorClass}>{categError}</p>
+                  <p className={errorClass}>
+                    {categError}
+                  </p>
                 )}
               </div>
 
@@ -313,7 +317,9 @@ function App() {
                 />
 
                 {manufError && (
-                  <p className={errorClass}>{manufError}</p>
+                  <p className={errorClass}>
+                    {manufError}
+                  </p>
                 )}
               </div>
 
@@ -340,7 +346,9 @@ function App() {
                 />
 
                 {healthError && (
-                  <p className={errorClass}>{healthError}</p>
+                  <p className={errorClass}>
+                    {healthError}
+                  </p>
                 )}
               </div>
 
@@ -365,7 +373,9 @@ function App() {
                 />
 
                 {brandError && (
-                  <p className={errorClass}>{brandError}</p>
+                  <p className={errorClass}>
+                    {brandError}
+                  </p>
                 )}
               </div>
 
@@ -405,7 +415,9 @@ function App() {
                 </div>
 
                 {roleError && (
-                  <p className={errorClass}>{roleError}</p>
+                  <p className={errorClass}>
+                    {roleError}
+                  </p>
                 )}
               </div>
 
@@ -574,7 +586,13 @@ function App() {
                     {activeGadget.deviceName}
                   </h3>
 
-                  <span className="rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold text-white">
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                      activeGadget.role === "Engineer"
+                        ? "bg-blue-100 text-blue-700"
+                        : "bg-green-100 text-green-700"
+                    }`}
+                  >
                     {activeGadget.role}
                   </span>
                 </div>
